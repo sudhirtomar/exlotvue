@@ -28,7 +28,12 @@
 
   <div class="field">
     <%= form.label :Role %>
-    <%= form.text_field :role, id: :user_email %>
+    <%= form.select(
+    :id,
+    options_for_select(role),
+    {},
+    {multiple: true, size: 10})
+    %>
   </div>
 
   <div class="actions">
